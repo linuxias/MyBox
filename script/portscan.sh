@@ -1,7 +1,7 @@
 #!/bin/bash
-IP=$1
-first_port=$2
-last_port=$3
+IP="127.0.0.1"
+first_port=$1
+last_port=$2
 
 function usage() {
 	echo "Script for scanning port"
@@ -10,7 +10,7 @@ function usage() {
 	exit
 }
 
-if [ $# -ne 3 ]
+if [ $# -ne 2 ]
 then
 	usage
 fi
