@@ -26,3 +26,8 @@ match OverLength /\%81v.\+/
 
 syntax on
 filetype indent on
+
+nmap <C-H> <C-W>h 
+nmap <C-J> <C-W>j 
+nmap <C-K> <C-W>k 
+nmap <C-L> <C-W>l 
