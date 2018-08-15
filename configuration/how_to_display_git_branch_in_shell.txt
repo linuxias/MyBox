@@ -1,0 +1,36 @@
+#Insert this script to .bashrc file
+
+# branch color
+c_cyan=`tput setaf 6`
+c_red=`tput setaf 1`
+c_green=`tput setaf 2`
+c_sgr0=`tput sgr0`
+
+branch_color () {
+    if git rev-parse --git-dir >/dev/null 2>&1 
+    then
+        color=""
+        if git diff --quiet 2>/dev/null >&2
+        then
+            color="${c_green}"
+            if git status | grep 'Your branch is ahead of' > /dev/null
+            then
+                color="${c_cyan}"
+            fi
+        else
+            color=${c_red}
+        fi
+    else
+        return 0
+    fi
+    echo -ne $color
+}
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$(branch_color)\]$(__git_ps1)\[${c_sgr0}\]\$ '
+fi
+
+
+
