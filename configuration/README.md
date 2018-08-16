@@ -1,9 +1,12 @@
 # MyConfiguration
 
-###1. mkcscope.sh
-####1.1 cp mkcscope.sh /usr/bin/mkcscope
+### 1. mkcscope.sh
 
-####1.2 Insert below script in .vimrc
+#### 1.1 cp mkcscope.sh /usr/bin/mkcscope
+
+#### 1.2 Insert below script in .vimrc
+
+```bash
 "cscope
 
 set csprg=/usr/bin/cscope
@@ -18,6 +21,7 @@ else
 endif
 set csverb
 "cscope
+```
 
-###2. git_branch_name.txt
+### 2. git_branch_name.txt
 If you want to display git branch name to shell you used, copy and paste your shell rc file.
