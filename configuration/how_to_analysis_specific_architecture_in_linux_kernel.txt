@@ -1,0 +1,7 @@
+1. If ctags and cscope are not installed, install them.
+
+2. Change directory to the Linux kernel source root directory.
+
+3. Execute the following command.
+   $make tags ARCH=arm64
+   $make cscope ARCH=arm64
