@@ -1,0 +1,9 @@
+[Unit]
+Description=run script when the time after 10 min
+
+[TIimer]
+OnBootSec=10min
+OnUnitActiveSec=3h
+
+[Install]
+WantedBy=timer.target

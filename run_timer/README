@@ -1,0 +1,4 @@
+This example scripts ars for register job for running periodly.
+
+Timer and Service scripts are located in "/etc/systemd/system/"
+

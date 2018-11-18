@@ -1,0 +1,9 @@
+[Unit]
+Description=My job run daily.
+
+[Service]
+Type=oneshot
+ExecStart=/my/running/script/path
+
+[Install]
+WantedBy=daily_my_job.service
